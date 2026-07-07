@@ -1,0 +1,5 @@
+dist/
+packages/
+node_modules/
+*.zip
+schemas/gschemas.compiled

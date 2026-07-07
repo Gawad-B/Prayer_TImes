@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.prayer-times"
+          path="/org/gnome/shell/extensions/prayer-times/">
+ 
+    <!-- Location -->
+    <key name="location-auto" type="b">
+      <default>true</default>
+      <summary>Auto-detect location</summary>
+      <description>Use GeoClue2 to auto-detect latitude/longitude.</description>
+    </key>
+    <key name="latitude" type="d">
+      <default>0.0</default>
+      <summary>Latitude</summary>
+      <description>Manual latitude when location-auto is false.</description>
+    </key>
+    <key name="longitude" type="d">
+      <default>0.0</default>
+      <summary>Longitude</summary>
+      <description>Manual longitude when location-auto is false.</description>
+    </key>
+    <key name="location-name" type="s">
+      <default>''</default>
+      <summary>Location name</summary>
+      <description>Display name of the location (city).</description>
+    </key>
+ 
+    <!-- Calculation -->
+    <key name="calculation-method" type="s">
+      <choices>
+        <choice value="MuslimWorldLeague"/>
+        <choice value="NorthAmerica"/>
+        <choice value="MoonsightingCommittee"/>
+        <choice value="UmmAlQura"/>
+        <choice value="Egyptian"/>
+        <choice value="Karachi"/>
+        <choice value="Tehran"/>
+        <choice value="Dubai"/>
+        <choice value="Singapore"/>
+        <choice value="Turkey"/>
+      </choices>
+      <default>'MuslimWorldLeague'</default>
+      <summary>Prayer calculation method</summary>
+      <description>Islamic authority whose Fajr/Isha angle definitions to use.</description>
+    </key>
+    <key name="madhab" type="s">
+      <choices>
+        <choice value="Shafi"/>
+        <choice value="Hanafi"/>
+      </choices>
+      <default>'Shafi'</default>
+      <summary>Madhab (Asr calculation)</summary>
+      <description>Shafi = shadow ratio 1x, Hanafi = shadow ratio 2x.</description>
+    </key>
+    <key name="high-latitude-rule" type="s">
+      <choices>
+        <choice value="None"/>
+        <choice value="MiddleOfTheNight"/>
+        <choice value="SeventhOfTheNight"/>
+        <choice value="TwilightAngle"/>
+      </choices>
+      <default>'None'</default>
+      <summary>High latitude rule</summary>
+      <description>Correction method for polar/high-latitude regions.</description>
+    </key>
+ 
+    <!-- Notifications -->
+    <key name="notify-before-minutes" type="i">
+      <range min="0" max="60"/>
+      <default>10</default>
+      <summary>Notify N minutes before prayer</summary>
+    </key>
+    <key name="notify-after-minutes" type="i">
+      <range min="0" max="60"/>
+      <default>10</default>
+      <summary>Notify N minutes after prayer (reminder)</summary>
+    </key>
+ 
+    <!-- Audio -->
+    <key name="muezzin" type="s">
+      <choices>
+        <choice value="makkah"/>
+        <choice value="medina"/>
+        <choice value="egypt"/>
+        <choice value="custom"/>
+        <choice value="muted"/>
+      </choices>
+      <default>'makkah'</default>
+      <summary>Muezzin (adhan caller)</summary>
+      <description>Which adhan audio to play at prayer time.</description>
+    </key>
+    <key name="custom-audio-path" type="s">
+      <default>''</default>
+      <summary>Custom adhan audio file path</summary>
+      <description>Absolute path to a local OGG/MP3/FLAC audio file. Only used when muezzin is 'custom'.</description>
+    </key>
+    <key name="audio-volume" type="d">
+      <range min="0.0" max="1.0"/>
+      <default>1.0</default>
+      <summary>Adhan volume (0.0–1.0)</summary>
+    </key>
+ 
+    <!-- Display -->
+    <key name="show-seconds" type="b">
+      <default>false</default>
+      <summary>Show seconds in countdown</summary>
+    </key>
+    <key name="show-prayer-name" type="b">
+      <default>true</default>
+      <summary>Show prayer name in panel</summary>
+    </key>
+    <key name="panel-position" type="s">
+      <choices>
+        <choice value="far-left"/>
+        <choice value="left"/>
+        <choice value="center"/>
+        <choice value="right"/>
+        <choice value="far-right"/>
+      </choices>
+      <default>'right'</default>
+      <summary>Panel position</summary>
+      <description>Where to place the indicator in the GNOME top bar.</description>
+    </key>
+ 
+  </schema>
+</schemalist>

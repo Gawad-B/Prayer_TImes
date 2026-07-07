@@ -1,0 +1,29 @@
+{
+  "name": "prayer-times-gnome",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "install-ext": "make install",
+    "package": "make package"
+  },
+  "devDependencies": {
+    "@girs/adw-1": "4.1.0",
+    "@girs/geoclue-2.0": "4.1.0",
+    "@girs/gio-2.0": "4.1.0",
+    "@girs/gjs": "4.1.0",
+    "@girs/glib-2.0": "4.1.0",
+    "@girs/gnome-shell": "50.0.3",
+    "@girs/gst-1.0": "4.1.0",
+    "@girs/gtk-4.0": "4.0.4",
+    "@girs/st-14": "14.0.0-4.0.0-rc.17",
+    "esbuild": "^0.28.1",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "adhan": "^4.4.3"
+  }
+}

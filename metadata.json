@@ -1,0 +1,16 @@
+{
+  "name": "Prayer Times",
+  "description": "Islamic prayer times indicator for GNOME Shell. Shows next prayer countdown in the top bar, plays adhan, and sends notifications.",
+  "uuid": "prayer-times@gawad-b.github.io",
+  "version": 1,
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
+  ],
+  "url": "https://github.com/prayer-times/gnome-extension",
+  "settings-schema": "org.gnome.shell.extensions.prayer-times"
+}
