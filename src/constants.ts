@@ -1,7 +1,7 @@
 // src/constants.ts
 // Shared constants and type definitions.
  
-export const EXT_UUID = 'prayer-times@islamic.gnome';
+export const EXT_UUID = 'prayer-times@gawad-b.github.io';
 export const SCHEMA_ID = 'org.gnome.shell.extensions.prayer-times';
  
 /** Names of the 5 daily prayers in order. */

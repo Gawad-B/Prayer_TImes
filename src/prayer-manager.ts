@@ -137,13 +137,13 @@ export class PrayerManager {
         }
       }
  
-      // "At time" notification + adhan
       if (msToTime > 0) {
         const secToTime = Math.floor(msToTime / 1000);
         this._prayerTimers.push(
           GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, secToTime, () => {
-            notifyPrayerTime(entry.name);
-            if (entry.name !== 'Sunrise') {
+            const isPrayer = entry.name !== 'Sunrise';
+            notifyPrayerTime(entry.name, isPrayer ? () => this._audio.stop() : undefined);
+            if (isPrayer) {
               this._audio.play(
                 this._settings.get_string('muezzin'),
                 this._settings.get_string('custom-audio-path'),
