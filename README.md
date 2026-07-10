@@ -37,6 +37,9 @@ npm run build
 # Compile GSettings schema + install to ~/.local/share/gnome-shell/extensions/
 make install
 
+# Or: one-step build + install
+./install.sh
+
 # Restart GNOME Shell
 # Wayland: log out and back in
 # X11: Alt+F2 → type "r" → Enter
