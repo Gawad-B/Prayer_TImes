@@ -11,6 +11,7 @@ import { PrayerManager } from './prayer-manager.js';
 import { AudioPlayer } from './audio.js';
 import { getCurrentLocation } from './location.js';
 import { SCHEMA_ID } from './constants.js';
+import { destroyNotificationSource } from './notifications.js';
  
 /**
  * Maps setting value → GNOME panel box + index.
@@ -161,6 +162,7 @@ export default class PrayerTimesExtension extends Extension {
     this._manager = null;
     this._audio?.destroy();
     this._audio = null;
+    destroyNotificationSource();
     this._removeIndicator();
     this._settings = null;
   }

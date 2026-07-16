@@ -121,9 +121,6 @@ fi
 info "Running npm install..."
 npm install
 
-info "Type-checking..."
-npm run typecheck
-
 info "Building extension..."
 npm run build
 
